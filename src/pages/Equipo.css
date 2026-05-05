@@ -1,0 +1,215 @@
+.equipo {
+  padding-top: 80px;
+  background: #04080f;
+}
+
+/* Hero */
+.equipo-hero {
+  background: #070e1a;
+  padding: 80px 24px 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.equipo-hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 158, 255, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.equipo-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.equipo-title {
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.equipo-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+/* Sections */
+.equipo-section {
+  padding: 80px 24px;
+  background: #04080f;
+}
+
+.equipo-section-alt {
+  background: #070e1a;
+}
+
+.equipo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 48px;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Grids */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.advisors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.member-card {
+  background: rgba(7, 14, 26, 0.6);
+  border: 1px solid rgba(59, 158, 255, 0.15);
+  border-radius: 14px;
+  padding: 32px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 158, 255, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* Photo */
+.member-photo-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid rgba(59, 158, 255, 0.3);
+  overflow: hidden;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info */
+.member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.member-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3b9eff;
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+.member-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.member-bullets li {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.55;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.member-bullets li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #3b9eff;
+  font-weight: 700;
+}
+
+/* LinkedIn button */
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  margin-top: auto;
+}
+
+.linkedin-btn:hover {
+  background: #3b9eff;
+  color: #ffffff;
+  border-color: #3b9eff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advisors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .founders-grid,
+  .advisors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equipo-section {
+    padding: 56px 16px;
+  }
+}

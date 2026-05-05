@@ -1,0 +1,140 @@
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  background-color: #04080f;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #04080f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+h1 { font-size: 3.25rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.375rem; }
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.btn-primary {
+  background: #3b9eff;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #2d7fd4;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #3b9eff;
+  border: 1px solid rgba(59, 158, 255, 0.4);
+}
+
+.btn-outline:hover {
+  background: rgba(59, 158, 255, 0.08);
+  border-color: #3b9eff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 0.85rem 2rem;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+  position: relative;
+}
+
+.section-alt {
+  background-color: #070e1a;
+}
+
+.section-dark {
+  background-color: #04080f;
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.7s ease forwards;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+  .section { padding: 64px 0; }
+  .btn { padding: 0.6rem 1.25rem; }
+}

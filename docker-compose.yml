@@ -1,0 +1,16 @@
+services:
+  baboon-web:
+    build: .
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.baboon-web.rule=Host(`tudominio.com`)"
+      - "traefik.http.routers.baboon-web.entrypoints=websecure"
+      - "traefik.http.routers.baboon-web.tls.certresolver=letsencrypt"
+      - "traefik.http.services.baboon-web.loadbalancer.server.port=3000"
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
